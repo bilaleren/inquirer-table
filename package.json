@@ -1,0 +1,100 @@
+{
+  "name": "inquirer-table",
+  "version": "1.0.0",
+  "description": "A table prompt for Inquirer.js.",
+  "type": "module",
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    "./package.json": "./package.json",
+    ".": {
+      "import": {
+        "types": "./dist/index.d.ts",
+        "default": "./dist/index.mjs"
+      },
+      "require": {
+        "types": "./dist/index.d.ts",
+        "default": "./dist/index.cjs"
+      }
+    }
+  },
+  "license": "MIT",
+  "files": [
+    "dist"
+  ],
+  "keywords": [
+    "answer",
+    "answers",
+    "ask",
+    "base",
+    "cli",
+    "command",
+    "command-line",
+    "confirm",
+    "enquirer",
+    "generate",
+    "generator",
+    "hyper",
+    "table",
+    "inquirer-table",
+    "inquire",
+    "inquirer",
+    "interface",
+    "iterm",
+    "javascript",
+    "menu",
+    "node",
+    "nodejs",
+    "prompt",
+    "promptly",
+    "prompts",
+    "question",
+    "readline",
+    "scaffold",
+    "scaffolder",
+    "scaffolding",
+    "stdin",
+    "stdout",
+    "terminal",
+    "tty",
+    "ui",
+    "zsh"
+  ],
+  "scripts": {
+    "prebuild": "rm -rf dist && yarn run typecheck && yarn run lint",
+    "build": "NODE_ENV=production rollup -c",
+    "typecheck": "tsc",
+    "generate:dts": "dts-bundle-generator -o ./dist/index.d.ts ./src/index.ts --no-banner",
+    "lint": "eslint \"./src/**/*.ts\" --quiet",
+    "lint:fix": "eslint \"./src/**/*.ts\" --fix",
+    "format": "prettier --write \"./src/**/*.ts\""
+  },
+  "dependencies": {
+    "@inquirer/core": "^10.1.7",
+    "@inquirer/figures": "^1.0.10",
+    "chalk": "^5.4.1",
+    "cli-cursor": "^5.0.0",
+    "cli-table3": "^0.6.5"
+  },
+  "devDependencies": {
+    "@rollup/plugin-typescript": "^12.1.2",
+    "@types/node": "^22.10.7",
+    "@typescript-eslint/eslint-plugin": "^8.24.1",
+    "@typescript-eslint/parser": "^8.24.1",
+    "dts-bundle-generator": "^9.5.1",
+    "eslint": "^8.57.1",
+    "eslint-config-prettier": "^10.0.1",
+    "eslint-plugin-import": "^2.31.0",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-prettier": "^5.2.3",
+    "eslint-plugin-promise": "^7.2.1",
+    "eslint-plugin-standard": "^5.0.0",
+    "inquirer-table": "link:.",
+    "prettier": "^3.5.1",
+    "rollup": "^4.34.8",
+    "rollup-plugin-node-externals": "^8.0.0",
+    "rollup-plugin-shell": "^1.0.9",
+    "typescript": "^5.7.3"
+  }
+}
