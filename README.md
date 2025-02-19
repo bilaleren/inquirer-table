@@ -1,5 +1,10 @@
 # inquirer-table
 
+[![NPM](https://img.shields.io/npm/v/inquirer-table.svg)](https://www.npmjs.com/package/inquirer-table)
+![](https://badgen.net/npm/license/inquirer-table)
+![](https://badgen.net/npm/dw/inquirer-table)
+![](https://badgen.net/npm/dm/inquirer-table)
+
 > A table prompt for [Inquirer.js](https://github.com/SBoudrias/Inquirer.js).
 
 Interactive table component for command line interfaces.
