@@ -30,7 +30,7 @@ async function bootstrap() {
     },
     { signal: controller.signal }
   ).catch((error) => {
-    if (error instanceof AbortPromptError) {
+    if (error.name === AbortPromptError.name) {
       // Default value
       return undefined;
     }
